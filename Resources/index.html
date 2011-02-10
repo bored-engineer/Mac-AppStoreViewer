@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src='jquery.js'></script>
+        <script src='load.js'></script>
+    </head>
+    <body style='margin:0px;padding:0px;' onload="onloadpage()" style="color:white;background-color:#1c1c1c;margin:0">
+        <table width='100%' height='100%' valign='middle' border="0" cellpadding='0' cellspacing='0'>
+        <tr height='50px' valign='middle'>
+            <td valign='middle'>
+                <div style='position:absolute;top:15px;left:20px;height:50px;'>
+                    <img id='Navigation_Back_IMG' src="Images/Navigation_Back_Not_Selected.png" onclick="Navigation_Back()" /><img id='Navigation_Forward_IMG' src="Images/Navigation_Forward_Not_Selected.png" onclick="Navigation_Forward()" />
+                </div>
+                <div style='position:absolute;top:0px;left:50%;margin-left:-125px;height:50px;'>
+                    <table style='color:rgb(80,80,80);font-size:12px;font-family:Helvetica, Arial, Verdana, sans-serif;' width='250px' border="0">
+                        <tr>
+                            <td width='33.33%'><center><img height='25' onclick="Featured_Load()" src='Images/Favorites.png'></center></td>
+                            <td width='33.33%'><center><img height='25' onclick="Top_Charts_Load()" src='Images/Top_Charts.png'></center></td>
+                            <td width='33.33%'><center><img height='25' onclick="Categories_Load()" src='Images/Categories.png'></center></td>
+                        </tr>
+                        <tr>
+                            <td width='33.33%'><center>Featured</center></td>
+                            <td width='33.33%'><center>Top Charts</center></td>
+                            <td width='33.33%'><center>Categories</center></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style='position:absolute;top:15px;left:100%;margin-left:-200px;width:200px;'>
+                    <input style="width:175px;" name='searchbox' id='searchbox' onkeydown="if (event.keyCode == 13){Search();}" type="search" placeholder="Search..." autosave="main_search" results="5" />
+               </div>
+            </tr>
+            </td>
+        </tr>
+        <tr style='height:20px;'>
+            <td id='statusbar' align='center' style='display:block;color:rgb(80,80,80);font-size:12px;font-family:Helvetica, Arial, Verdana, sans-serif;'>Starting Up</td>
+        </tr>
+        <tr>
+        <td style='outline:none;background: rgb(245, 246, 247) url(Images/backgroundTile.png) top center repeat;border-top-width:1px;border-top-style:solid;border-top-color:rgb(80,80,80);'>
+            <iframe id='content' onload='onloadiframe()' frameborder='0' style='visibility:hidden;width:100%;height:100%;'></iframe>
+        </td>
+        </tr>
+        </table>
+        
+        
+    </body>
+</html>
