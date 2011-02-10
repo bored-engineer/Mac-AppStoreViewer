@@ -45,7 +45,7 @@ function loadpagefromurl(url,appendtohistory){
         document.getElementById('content').src=("data:text/html;base64,"+Titanium.Codec.encodeBase64(data));
     }else{
         //If user is offline show offline page...
-        document.getElementById('content').src="app://Offline/index.html";
+        alert("It appears that you are offline. An active internet connection is required to use the App Store Viewer.");
     }
 }
 
